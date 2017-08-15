@@ -9,7 +9,7 @@ var app = express();
 // but feel free to use whatever libs or frameworks you'd like through `package.json`.
 
 // http://expressjs.com/en/starter/static-files.html
-app.use(express.static('public'));
+app.use(express.static('ui'));
 
 // http://expressjs.com/en/starter/basic-routing.html
 app.get("/", function (request, response) {
@@ -34,6 +34,6 @@ var dreams = [
 ];
 
 // listen for requests :)
-var listener = app.listen(process.env.PORT, function () {
+var listener = app.listen(8080, function () {
   console.log('Your app is listening on port ' + listener.address().port);
 });
